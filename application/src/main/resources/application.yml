@@ -1,0 +1,35 @@
+# Configurações de aplicação
+spring:
+  on-profiles: local
+  application:
+    name: sboot-token-ministerio-recomeco
+
+# Configurações do servidor
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html
+    operationsSorter: method
+
+# Configurações do Spring Security (se aplicável)
+# security:
+#   basic:
+#     enabled: true
+#   oauth2:
+#     client:
+#       registration:
+#         google:
+#           client-id: SeuClientID
+#           client-secret: SeuClientSecret
+
+---
+# Configurações do banco de dados (se aplicável)
+spring:
+  on-profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/ministeriodb?useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: R00Tr00t2020

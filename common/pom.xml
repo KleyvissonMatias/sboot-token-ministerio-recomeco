@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>br.com.ministerio.recomeco</groupId>
+        <artifactId>sboot-token-ministerio-recomeco</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>sboot-token-ministerio-recomeco-common</artifactId>
+    <name>Servico Ministerio (common)</name>
+    <description>API ministerio - modulo common ou utilidades</description>
+
+    <properties>
+        <java.version>20</java.version>
+        <architecture.read>common</architecture.read>
+    </properties>
+</project>

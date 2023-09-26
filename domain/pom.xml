@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>br.com.ministerio.recomeco</groupId>
+        <artifactId>sboot-token-ministerio-recomeco</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <name>Servico Token (domain)</name>
+    <description>API Token - modulo de Dominio</description>
+
+    <artifactId>sboot-token-ministerio-recomeco-domain</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>20</java.version>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <architecture.read>domain</architecture.read>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.com.ministerio.recomeco</groupId>
+            <artifactId>sboot-token-ministerio-recomeco-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
