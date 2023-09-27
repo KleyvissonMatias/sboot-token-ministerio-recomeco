@@ -69,6 +69,7 @@ public class UsuarioController {
             ErroResponse erroResponse = new ErroResponse(e.getStatus().value(), e.getMessage());
             return ResponseEntity.status(e.getStatus().value()).body(erroResponse);
         } catch (Exception e) {
+            log.error(e.getMessage(), e);
             ErroResponse erroResponse = new ErroResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), Constans.ERRO_INTERNO);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(erroResponse);
         }
