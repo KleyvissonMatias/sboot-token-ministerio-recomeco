@@ -6,8 +6,5 @@ import java.util.Optional;
 
 public interface UsuarioRepository {
     Optional<Usuario> obterUsername(String username);
-
-    Optional<Usuario> obterUsernameEPassword(String username, String password);
-
     void criar(Usuario usuario);
 }
