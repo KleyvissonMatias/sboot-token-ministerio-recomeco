@@ -19,7 +19,7 @@ public interface JdbiUsuarioRepositoryImpl extends UsuarioRepository {
     @Override
     @SqlQuery
     @RegisterBeanMapper(Usuario.class)
-    Optional<Usuario> obterUsername(@Bind String username);
+    Usuario obterUsername(@Bind String username);
 
     @Override
     @SqlUpdate

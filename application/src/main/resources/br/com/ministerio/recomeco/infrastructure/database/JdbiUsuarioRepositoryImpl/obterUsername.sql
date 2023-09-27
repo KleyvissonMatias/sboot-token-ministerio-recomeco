@@ -4,6 +4,6 @@ username as username,
 password as password,
 email as email,
 role as role
-FROM ministeriodb.usuario
+FROM ministeriodb.usuarios
 WHERE dataExclusao IS NULL
-    AND username = :username AND password = :password;
+    AND username = :username;

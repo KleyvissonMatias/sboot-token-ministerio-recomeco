@@ -1,7 +1,10 @@
 package br.com.ministerio.recomeco.domain.dto;
 
 import br.com.ministerio.recomeco.enums.UserRole;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,11 +13,9 @@ import java.util.Collection;
 import java.util.List;
 
 @Data
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Getter
-@Setter
 public class Usuario implements UserDetails {
     private Integer id;
     private String username;

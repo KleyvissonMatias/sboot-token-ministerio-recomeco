@@ -16,7 +16,7 @@ springdoc:
 api:
   security:
     token:
-      secret: ${JWT_SECRET:my-secret-key}
+      secret: ${JWT_SECRET:a41920be-9896-4cfb-9c7d-61b12ae8fc21}
 
 # Configurações do Spring Security (se aplicável)
 # security:
