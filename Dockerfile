@@ -1,4 +1,9 @@
-FROM ubuntu:latest
-LABEL authors="kleyv"
+FROM adoptopenjdk:20-jre-hotspot
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY target/sboot-token-ministerio-recomeco.jar .
+
+EXPOSE 8081
+
+CMD ["java", "-jar", "sboot-token-ministerio-recomeco.jar"]

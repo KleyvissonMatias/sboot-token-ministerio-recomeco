@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  # Serviço MySQL
+  mysql:
+    image: mysql:8
+    container_name: sboot-token-ministerio-recomeco-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ministeriodb
+      MYSQL_USER: sboot_user
+      MYSQL_PASSWORD: sboot_password
+    ports:
+      - "3306:3306"
+
+  # Serviço da aplicação Java
+  sboot-token-ministerio-recomeco:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sboot-token-ministerio-recomeco-app
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/ministeriodb
+      SPRING_DATASOURCE_USERNAME: sboot_user
+      SPRING_DATASOURCE_PASSWORD: sboot_password
