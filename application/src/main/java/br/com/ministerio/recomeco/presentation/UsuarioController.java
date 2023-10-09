@@ -64,7 +64,6 @@ public class UsuarioController {
                 this.service.criar(novoUsuario);
             }
             return ResponseEntity.ok().build();
-
         } catch (UsernameBadRequestException e) {
             ErroResponse erroResponse = new ErroResponse(e.getStatus().value(), e.getMessage());
             return ResponseEntity.status(e.getStatus().value()).body(erroResponse);

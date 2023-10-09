@@ -32,7 +32,7 @@ public class TokenService {
             Algorithm algorithm = Algorithm.HMAC256(secret);
 
             String token = JWT.create()
-                    .withIssuer("token-ministerio-recomeco-api")
+                    .withIssuer(Constans.ISSUER_JWT)
                     .withSubject(user.getUsername())
                     .withClaim("roles", roles)
                     .withExpiresAt(genExpirationDate())
@@ -47,7 +47,7 @@ public class TokenService {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             return JWT.require(algorithm)
-                    .withIssuer("auth-api")
+                    .withIssuer(Constans.ISSUER_JWT)
                     .build()
                     .verify(token)
                     .getSubject();
