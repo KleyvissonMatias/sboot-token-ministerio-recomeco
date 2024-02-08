@@ -10,6 +10,7 @@ Esta é uma API JWT Token desenvolvida em Java 20 e Spring Boot 3, que utiliza o
 - Spring Boot 3
 - MySQL 8.0
 - Maven (Versão Atual)
+- Git
 
 ## Configuração
 
